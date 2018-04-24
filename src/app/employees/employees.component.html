@@ -1,0 +1,30 @@
+<section class="employees-details">
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>City</th>
+        <th>Address 1</th>
+        <th>Address 2</th>
+        <th>Postal code</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let employee of employeeData.data">
+        <td>{{employee.id}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.phone}}</td>
+        <td>{{employee.address.city}}</td>
+        <td>{{employee.address.address_line1}}</td>
+        <td>{{employee.address.address_line2}}</td>
+        <td>{{employee.address.postal_code}}</td>
+        <td>
+          <a>Edit</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
