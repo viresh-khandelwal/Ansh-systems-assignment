@@ -1,7 +1,10 @@
 <section class="employees-details">
   <form class="filter-employees-form">
-    <input type="text" name="filterText"  (input) = "filterTable($event)"/>
+    <input type="text" name="filterText" [(ngModel)]="filterText" />
   </form>
+  <a [routerLink]= "'add'">
+    <button class = "add-new">Add New</button>
+  </a>
   <table>
     <thead>
       <tr>
@@ -16,16 +19,18 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor = "let employee of employeeData.data">
+      <tr *ngFor="let employee of employeeData.data | filterEmployees : filterText">
         <td>{{employee.id}}</td>
         <td>{{employee.name}}</td>
-        <td>{{employee.phone}}</td>
+        <td>{{employee.phone | checkPhoneNumber}}</td>
         <td>{{employee.address.city}}</td>
         <td>{{employee.address.address_line1}}</td>
         <td>{{employee.address.address_line2}}</td>
         <td>{{employee.address.postal_code}}</td>
         <td>
-          <a>Edit</a>
+          <a [routerLink]="[employee.id,'edit']">
+            Edit
+          </a>
         </td>
       </tr>
     </tbody>

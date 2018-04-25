@@ -8,6 +8,6 @@ td, th{
     padding: 5px;
 }
 
-.filter-employees-form{
+.filter-employees-form, .add-new{
     margin: 10px;
 }

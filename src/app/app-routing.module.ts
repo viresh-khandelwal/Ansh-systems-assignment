@@ -9,8 +9,8 @@ import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
   imports: [
     RouterModule.forRoot([
       { path: 'employees', component: EmployeesComponent },
-      { path: ':id/edit',component: EmployeeEditComponent },
-      { path: 'add', component: EmployeeEditComponent },
+      { path: 'employees/:id/edit',component: EmployeeEditComponent },
+      { path: 'employees/add', component: EmployeeEditComponent },
       { path: '', redirectTo: 'employees', pathMatch: 'full' }
     ])
   ],

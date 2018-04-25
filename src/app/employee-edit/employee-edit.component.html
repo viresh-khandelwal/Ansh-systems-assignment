@@ -1,3 +1,37 @@
-<p>
-  employee-edit works!
-</p>
+<section class="form_container" style="border:1px solid black;">
+  <form [formGroup]="employeeDetilsForm" (ngSubmit)="submitForm()">
+    <div>
+      <div>
+        <label for="employeeId">Id: </label>
+        <input formControlName="employeeId" name="employeeId" id="employeeId" />
+      </div>
+      <div>
+        <label for="name">Name: </label>
+        <input formControlName="name" name="name" id="name" />
+        <!-- <div class="error" *ngIf = "name.errors.required && name.touched">required</div> -->
+      </div>
+      <div>
+        <label for="phone">Phone: </label>
+        <input formControlName="phone" name="phone" id="phone" />
+      </div>
+      <div>Address:</div>
+      <div>
+        <label for="city">City: </label>
+        <input formControlName="city" name="city" id="city" />
+      </div>
+      <div>
+        <label for="address_line1">Address_line1: </label>
+        <input formControlName="address_line1" name="address_line1" id="address_line1" />
+      </div>
+      <div>
+        <label for="Address_line2">Address_line2: </label>
+        <input formControlName="address_line2" name="address_line2" id="address_line2" />
+      </div>
+      <div>
+        <label for="postal_code">postal-code: </label>
+        <input formControlName="postal_code" name="postal_code" id="postal_code" />
+      </div>
+      <button type="submit">Save</button>
+    </div>
+  </form>
+</section>
