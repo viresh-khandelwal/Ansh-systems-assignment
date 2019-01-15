@@ -31,7 +31,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [EmployeeRestapiService , FilterEmployeesPipe, Employee],
+  providers: [EmployeeRestapiService , Employee],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
