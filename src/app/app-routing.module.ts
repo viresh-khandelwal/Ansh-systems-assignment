@@ -8,10 +8,9 @@ import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
 @NgModule({ 
   imports: [
     RouterModule.forRoot([
-      { path: 'employees', component: EmployeesComponent },
-      { path: 'employees/:id/edit',component: EmployeeEditComponent },
-      { path: 'employees/add', component: EmployeeEditComponent },
-      { path: '', redirectTo: 'employees', pathMatch: 'full' }
+      { path: ':id/edit',component: EmployeeEditComponent },
+      { path: 'add', component: EmployeeEditComponent },
+      { path: '',  component: EmployeesComponent }
     ])
   ],
   exports: [RouterModule]
